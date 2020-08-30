@@ -1,0 +1,30 @@
+controller_list:
+  - name: fake_indexfinger_controller
+    joints:
+      - base_link_to_index_base
+      - index_base_to_middle
+      - index_middle_to_end
+  - name: fake_middlefinger_controller
+    joints:
+      - base_link_to_middle_base
+      - middle_base_to_middle
+      - middle_middle_to_end
+  - name: fake_ringfinger_controller
+    joints:
+      - base_link_to_ring_base
+      - ring_base_to_middle
+      - ring_middle_to_end
+  - name: fake_thumbfinger_controller
+    joints:
+      - thumb_base_palm
+      - thumb_end_to_thumb_base
+  - name: fake_pinkyfinger_controller
+    joints:
+      - base_link_to_pinky_base
+      - pinky_base_to_middle
+      - pinky_middle_to_end
+initial:  # Define initial robot poses.
+  - group: indexfinger
+    pose: home
+  - group: middlefinger
+    pose: second
